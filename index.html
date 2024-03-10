@@ -1,214 +1,245 @@
 <!DOCTYPE html>
 
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Protest+Revolution" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
     <title>Book courses</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <header>
-        <!--Top Navigation bar-->
-        <nav class="navigation-bar">
-            <a href="">The gym</a>
-            <a href="">Courses</a>
-            <a href="">Membership</a>
-            <a href="">Contact us</a>
-        </nav>
+      <div class="sitename-box-tablet-desktop">
+        <h1>Project Crux</h1>
+        <p>Climbing gym</p>
+      </div>
 
-        <!--The banner with text which is placed through the header background image-->
-        <div class="banner">
-            <div class="header-text-box">
-                <h1>Project Crux</h1>
-                <h2>Climbing gym</h2>
-                <h2 class="page-title">Book course</h2>
-            </div>
-        </div>
+      <!--Dropdown menu for mobiles and tablets-->
+      <div class="navigation-mobile">
+        <i class="fa-solid fa-bars fa-2xl dropdown-menu-icon"></i>
+        <nav class="navigation-content-mobile">
+          <a href="">The gym</a>
+          <a href="">Courses</a>
+          <a href="">Membership</a>
+          <a href="">Contact us</a>
+        </nav>
+      </div>
+
+      <!--Top Navigation bar for tablets and desktop-->
+      <nav class="navigation-tablet-desktop">
+        <a href="">The gym</a>
+        <a href="">Courses</a>
+        <a href="">Membership</a>
+        <a href="">Contact us</a>
+      </nav>
     </header>
 
+    <!--Hero section-->
+    <div class="hero-image">
+      <!--The banner with text which is placed through the hero section-->
+      <div class="banner">
+        <div class="hero-text">
+          <h1>Book course</h1>
+        </div>
+      </div>
+    </div>
+
     <form action="https://httpbin.org/post" method="post">
+      <h2>Apply for a course here</h2>
 
-        <h2>Book your course here</h2>
+      <!--Text input-->
+      <div class="tablet-desktop-layout">
+        <label class="form-area">
+          First name
+          <input type="text" name="first-name" placeholder="Type your first name" required />
+        </label>
 
         <!--Text input-->
-        <div class="form-area">
-            <label> First name
-                <input type="text" name="first-name" placeholder="Write your first name" required>
+        <label class="form-area">
+          Last name
+          <input type="text" name="last-name" placeholder="Type your last name" required />
+        </label>
+      </div>
+
+      <!--Email input-->
+      <label class="form-area">
+        E-mail
+        <input type="email" name="email" placeholder="Type your e-mail" required />
+      </label>
+
+      <!--Phone number input-->
+      <label class="form-area">
+        Phone number
+        <input type="tel" name="phone-number" placeholder="xxx-xxxxxxx" required />
+      </label>
+
+      <!--address box-->
+      <fieldset>
+        <legend>Address</legend>
+
+        <!--Address street text input-->
+        <label class="form-area">
+          Street
+          <input type="text" name="street" placeholder="Type your street" required />
+        </label>
+
+        <!--Address postcode text input-->
+        <div class="tablet-desktop-layout">
+          <div class="post-code-box">
+            <label class="form-area">
+              Post code
+              <input type="text" name="post-code" placeholder="xxx xx" required />
             </label>
-        </div>
+          </div>
 
-        <!--Text input-->
-        <div class="form-area">
-            <label> Last name
-                <input type="text" name="last-name" placeholder="Write your last name" required>
+          <!--Address city text input-->
+          <div class="city-box">
+            <label class="form-area">
+              City
+              <input type="text" name="city" placeholder="Type your city" required />
             </label>
+          </div>
         </div>
+      </fieldset>
 
-        <!--Email input-->
-        <div class="form-area">
-            <label> E-mail
-                <input type="email" name="email" placeholder="Write your e-mail" required>
-            </label>
+      <!--Radio input for course alternatives-->
+      <div class="form-area">
+        <label class="section-title"
+          >I want to sign up for the following course:
+
+          <label class="radio-option">
+            Bouldering
+            <input type="radio" name="course" value="bouldering" required />
+          </label>
+
+          <label class="radio-option">
+            Top rope climbing <input type="radio" name="course" value="top rope climbing" />
+          </label>
+
+          <label class="radio-option">
+            Sport climbing
+            <input type="radio" name="course" value="sport climbing" />
+          </label>
+
+          <label class="radio-option">
+            Trad climbing
+            <input type="radio" name="course" value="trad climbing" />
+          </label>
+        </label>
+      </div>
+
+      <!--Radio input for level alternatives-->
+      <div class="form-area">
+        <label class="section-title"
+          >Level:
+
+          <label class="radio-option">
+            It's my first time
+            <input type="radio" name="level" value="newbie" required />
+          </label>
+
+          <label class="radio-option">
+            Beginner
+            <input type="radio" name="level" value="beginner" />
+          </label>
+
+          <label class="radio-option">
+            Intermedier
+            <input type="radio" name="level" value="intermedier" />
+          </label>
+
+          <label class="radio-option">
+            Advanced
+            <input type="radio" name="level" value="advanced" />
+          </label>
+        </label>
+      </div>
+
+      <!--Checkbox input for equipment alternatives-->
+      <div class="form-area">
+        <p class="section-title">Need to rent climbing gear?</p>
+        <p>We provide ropes, carabiners and helmets if needed during the course.</p>
+
+        <div class="checkbox-option-box">
+          <label class="checkbox-option">
+            Climbing shoes
+            <input type="checkbox" name="equipment" value="Shoes" />
+          </label>
+
+          <label class="checkbox-option">
+            Climbing harness
+            <input type="checkbox" name="equipment" />
+          </label>
         </div>
+      </div>
 
-        <!--Phone number input-->
-        <div class="form-area">
-            <label> Phone number
-                <input type="tel" name="phone-number" placeholder="xxx-xxxxxxx" required>
-            </label>
-        </div>
+      <!--Select input for shoe sizes-->
+      <div class="form-area">
+        <label>
+          If shoes are needed, please choose your size
+          <select name="shoe-size">
+            <option disabled selected>Your shoe size</option>
+            <option>EU 35</option>
+            <option>EU 36</option>
+            <option>EU 37</option>
+            <option>EU 38</option>
+            <option>EU 39</option>
+            <option>EU 40</option>
+            <option>EU 41</option>
+            <option>EU 42</option>
+            <option>EU 43</option>
+            <option>EU 44</option>
+            <option>EU 45</option>
+            <option>EU 46</option>
+          </select>
+        </label>
+      </div>
 
-        <fieldset>
-            <legend>Address</legend>
-
-            <!--Address street text input-->
-            <div class="form-area">
-                <label> Street
-                    <input type="text" name="street" placeholder="Write your street" required>
-                </label>
-            </div>
-
-            <!--Address postcode text input-->
-            <div class="form-area">
-                <label> Post code
-                    <input type="text" name="post-code" placeholder="xxx xx" required>
-                </label>
-            </div>
-
-            <!--Address city text input-->
-            <div class="form-area">
-                <label> City
-                    <input type="text" name="city" placeholder="Write your city" required>
-                </label>
-            </div>
-        </fieldset>
-
-        <!--Radio input for course alternatives-->
-        <div class="form-area">
-            <label>I want to sign up for the following course:
-
-                <label class="radio-option"> Bouldering
-                    <input type="radio" name="course" required>
-                </label>
-
-                <label class="radio-option"> Top rope climbing <input type="radio" name="course">
-                </label>
-
-                <label class="radio-option"> Trad climbing
-                    <input type="radio" name="course">
-                </label>
-            </label>
-        </div>
-
-        <!--Radio input for level alternatives-->
-        <div class="form-area">
-            <label>Level:
-                <div>
-                    <label class="radio-option"> It's my first time
-                        <input type="radio" name="level" required>
-                    </label>
-                </div>
-
-                <div>
-                    <label class="radio-option"> Beginner
-                        <input type="radio" name="level">
-                    </label>
-                </div>
-
-                <div>
-                    <label class="radio-option"> Intermedier
-                        <input type="radio" name="level">
-                    </label>
-                </div>
-
-                <div>
-                    <label class="radio-option"> Advanced
-                        <input type="radio" name="level">
-                    </label>
-                </div>
-            </label>
-        </div>
-
-        <!--Checkbox input for equipment alternatives-->
-        <div class="form-area">
-            <p>Need to rent climbing gear? </p>
-            <p>We provide ropes, carabiners and helmets if needed during the course.</p>
-
-            <div>
-                <label class="checkbox-option"> Shoes
-                    <input type="checkbox" name="equipment" value="Shoes">
-                </label>
-            </div>
-
-            <div>
-                <label class="checkbox-option"> Klättersele
-                    <input type="checkbox" name="equipment">
-                </label>
-            </div>
-        </div>
-
-        <!--Select input for shoe sizes-->
-        <div class="form-area">
-            <label> If shoes are needed, please choose your size
-                <select name="shoe-size">
-                    <option disabled selected> Your shoe size</option>
-                    <option>EU 35</option>
-                    <option>EU 36</option>
-                    <option>EU 37</option>
-                    <option>EU 38</option>
-                    <option>EU 39</option>
-                    <option>EU 40</option>
-                    <option>EU 41</option>
-                    <option>EU 42</option>
-                    <option>EU 43</option>
-                    <option>EU 44</option>
-                    <option>EU 45</option>
-                    <option>EU 46</option>
-                </select>
-            </label>
-        </div>
-
-        <!--textarea for other informationn-->
-        <div class="form-area">
-            <label>Other information:
-                <textarea name="other-information" rows="10" cols="60"></textarea> </label>
-        </div>
-
+      <!--textarea for other informationn-->
+      <div class="form-area textarea-box">
+        <label>Other information: <textarea name="other-information" rows="10"></textarea></label>
+      </div>
+      <div class="submit-button">
         <button type="submit">Apply now!</button>
-
+      </div>
     </form>
 
     <footer>
-        <div>
-            <p>Contact us
-                <br>
-                projectcrux@example.com
-                <br>
-                000-0000000
-            </p>
-        </div>
+      <div>
+        <h5>Contact us</h5>
+        <p>
+          projectcrux@example.com
+          <br />
+          000-0000000
+        </p>
+      </div>
 
-        <div>
-            <a href="">The gym</a>
-            <a href="">Courses</a>
-            <a href="">Membership</a>
-        </div>
+      <div class="tablet-desktop-footer">
+        <a href="">The gym</a>
+        <a href="">Courses</a>
+        <a href="">Membership</a>
+      </div>
 
-        <div>
-            <p>Open
-                <br>
-                Monday-Thursday: 06:00-21:00
-                <br>
-                Friday: 06:00-20:00
-                <br>
-                Saturday-Sunday: 09:00-18:00
-            </p>
-        </div>
+      <div class="tablet-desktop-footer">
+        <p>
+          Open
+          <br />
+          Monday-Thursday: 06:00-21:00
+          <br />
+          Friday: 06:00-20:00
+          <br />
+          Saturday-Sunday: 09:00-18:00
+        </p>
+      </div>
     </footer>
-
-</body>
-
+  </body>
 </html>
